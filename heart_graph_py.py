@@ -67,11 +67,11 @@ def plot_graph(x, y):
     # add an increasing phase (parameter a in the function) to change the function over time
     for phase in range(0, 1500, 15):
         speed = 100
-        text_1.set_text('parameter a = ' + str(phase/100))
+        text_1.set_text('trust meter = ' + str(phase/15))
         line1.set_ydata(calculate_datapoints(phase/speed)[1])
         fig.canvas.draw()
         sleep(0.05)
-    text_1.set_text('Damn this is cheesy :P')		# text appears when param_a is at it's max
+    text_1.set_text('Damn that\'s cheesy :P')		# text appears when phase is at it's max
     plt.show(block=True)							# stop window from closing immediately
 
 
