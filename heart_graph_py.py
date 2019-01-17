@@ -33,17 +33,25 @@ def plot_graph(x, y):
     Also plot the values passed from calculate_datapoints().
     """
     plt.ion()
+
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    line1, = ax.plot(x, y, 'b-')
+    gca().set_position((.1, .3, .8, .6))
+    line1, = ax.plot(x, y, 'b-', linewidth=2.5)
     grid(True)
+    plt.xlim(-4, 4)
+    plt.ylim(-2, 3.5)
     for phase in range(0, 1500, 15):
         speed = 100
         line1.set_ydata(calculate_datapoints(phase/speed)[1])
         fig.canvas.draw()
         sleep(0.05)
+    plt.show(block=True)
+
+
+
 
 if __name__ == '__main__':
-    """don't excecute when script is used as a module"""
-    data = calculate_datapoints(10)
-    plot_graph(data[0], data[1])
+    DATA = calculate_datapoints(10)
+    plot_graph(DATA[0], DATA[1])
+    plt.close()
