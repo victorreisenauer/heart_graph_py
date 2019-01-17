@@ -3,6 +3,7 @@
 # imports
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 from pylab import *
 from time import sleep
 from random import randint
@@ -50,21 +51,23 @@ def plot_graph(x, y):
          \"Liebe muss nicht bitten, auch nicht fordern.
             Liebe muss die Kraft haben, in sich selbst zur Gewissheit zu kommen.
              [1] Dann übertrifft sie sogar die Schönheit der Mathematik ...\"
-        	                - Hermann Hesse (Anhang [1] von von Victor Reisenauer)
+                            - Hermann Hesse (Anhang [1] von von Victor Reisenauer)
                 """)
     else:
         figtext(.02, .02,
                 """
          \"Wer richtig rechnet, der findet sich selbst.
             Die meisten Menschen aber rechnen, um sich zu verlieren.\"
-        	                - Hermann Hesse (gewisse Änderungen von von Victor Reisenauer)
+                            - Hermann Hesse (gewisse Änderungen von von Victor Reisenauer)
                 """)
-
+    text_1 = ax.text(x=2, y=2, s='' )
     for phase in range(0, 1500, 15):
         speed = 100
+        text_1.set_text('parameter a = ' + str(phase/100))
         line1.set_ydata(calculate_datapoints(phase/speed)[1])
         fig.canvas.draw()
         sleep(0.05)
+    text_1.set_text('Damn this is cheesy :P')
     plt.show(block=True)
 
 
