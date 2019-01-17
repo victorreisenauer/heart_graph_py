@@ -53,14 +53,14 @@ def plot_graph(x, y):
          \"Liebe muss nicht bitten, auch nicht fordern.
             Liebe muss die Kraft haben, in sich selbst zur Gewissheit zu kommen.
              [1] Dann übertrifft sie sogar die Schönheit der Mathematik ...\"
-                            - Hermann Hesse (Anhang [1] von von Victor Reisenauer)
+                            - Hermann Hesse (Anhang [1] von Victor Reisenauer)
                 """)
     else:
         figtext(.02, .02,
                 """
-         \"Wer richtig rechnet, der findet sich selbst.
-            Die meisten Menschen aber rechnen, um sich zu verlieren.\"
-                            - Hermann Hesse (gewisse Änderungen von von Victor Reisenauer)
+         \"Wer richtig rechnet, der findet die Lösung.
+            Die meisten Menschen aber rechnen, um sich zu verrechnen.\"
+                            - Hermann Hesse (gewisse Änderungen von Victor Reisenauer)
                 """)
     text_1 = ax.text(x=2, y=2, s='')
 
