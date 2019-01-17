@@ -1,8 +1,8 @@
 """main script for the heart_graph_py.py project. Read README.md for more information"""
 
 # imports
-from pylab import *
 import numpy as np
+from pylab import *
 
 def cube(x):
     """
@@ -25,6 +25,10 @@ def calculate_datapoints(param_a):
     return data
 
 def plot_graph(x, y):
+    """
+    Generate and customize a graph.
+    Also plot the values passed from calculate_datapoints().
+    """
     plot(x, y)
     grid(True)
     show()
