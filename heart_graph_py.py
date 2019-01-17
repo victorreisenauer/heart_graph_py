@@ -2,7 +2,10 @@
 
 # imports
 import numpy as np
+import matplotlib.pyplot as plt
 from pylab import *
+from time import sleep
+
 
 def cube(x):
     """
@@ -29,11 +32,18 @@ def plot_graph(x, y):
     Generate and customize a graph.
     Also plot the values passed from calculate_datapoints().
     """
-    plot(x, y)
+    plt.ion()
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    line1, = ax.plot(x, y, 'b-')
     grid(True)
-    show()
+    for phase in range(0, 1500, 15):
+        speed = 100
+        line1.set_ydata(calculate_datapoints(phase/speed)[1])
+        fig.canvas.draw()
+        sleep(0.05)
 
 if __name__ == '__main__':
-	"""don't excecute when script is used as a module"""
-	data = calculate_datapoints(10)
-	plot_graph(data[0], data[1])
+    """don't excecute when script is used as a module"""
+    data = calculate_datapoints(10)
+    plot_graph(data[0], data[1])
