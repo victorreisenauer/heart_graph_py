@@ -16,7 +16,11 @@ This C++ project displays a specific function in a graph. The function has a par
  - I need to add an increasing parameter to map the function
 
 ### Step 3: Tools
- - Step 4: Problem breakdown
+ - Graph plotting library: matplotlib (https://matplotlib.org/)
+
+
+
+### Step 4: Problem breakdown
  - Create a graph
  - Create the function
  - Add an increasing (a) parameter
@@ -24,10 +28,18 @@ This C++ project displays a specific function in a graph. The function has a par
 
 
 
-
 ## How does it work?
 
+The following mathmatical function turns into a heart in a 4x4 grid when a goes from 1 to 10. 
+
+> x^(2/3) + 0.9*(3.3 - x^2)^(1/2) * sin(a * pie * x)
+
+Looks amazing!
+
 ## How can you run it yourself?
+
+Just fork my git repository, install the libraries and run it in your commandline. No special setup needed!
+
 
 ## Can you use it?
 
