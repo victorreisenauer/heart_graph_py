@@ -71,6 +71,8 @@ def plot_graph(x, y):
         line1.set_ydata(calculate_datapoints(phase/speed)[1])
         fig.canvas.draw()
         sleep(0.05)
+        if phase == 15:
+                time.sleep(2)
     text_1.set_text('Damn that\'s cheesy :P')		# text appears when phase is at it's max
     plt.show(block=True)							# stop window from closing immediately
 
